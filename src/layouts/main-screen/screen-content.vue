@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import YellowCyrcle from "@/components/main-screen/yellow-cyrcle.vue";
+import YellowCircle from "@/components/main-screen/yellow-circle.vue";
 import HoverSpinner from "@/components/main-screen/hover-spinner.vue";
 import useParallax from "@/composables/use-parallax";
 const title = ref(null);
@@ -8,7 +8,7 @@ useParallax(title);
 </script>
 <template>
     <div class="screen-content">
-        <YellowCyrcle />
+        <YellowCircle />
         <HoverSpinner />
         <div class="screen-content__headers">
             <RouterLink to="/" class="link link_left-rotate"

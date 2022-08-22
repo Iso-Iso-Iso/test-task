@@ -1,4 +1,4 @@
 <template>
     <div class="yellow-cyrcle"></div>
 </template>
-<style lang="scss" src="./yellow-cyrcle.scss"></style>
+<style lang="scss" src="./yellow-circle.scss"></style>
