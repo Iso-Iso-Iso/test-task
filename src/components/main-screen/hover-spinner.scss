@@ -1,0 +1,19 @@
+.hover-spinner {
+    width: max-content;
+    height: max-content;
+    transform-origin: center;
+    position: absolute;
+    top: 67vh;
+    left: 60vw;
+    cursor: pointer;
+    &:hover {
+        @include animate(rotateSpinner, 2s, linear infinite) {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

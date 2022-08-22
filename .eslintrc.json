@@ -1,0 +1,31 @@
+{
+    "env": {
+        "node": true
+    },
+    "parser": "vue-eslint-parser",
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-recommended",
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "max-depth": ["error", 2],
+        "no-duplicate-imports": [
+            "error",
+            { "includeExports": false }
+        ],
+        "vue/component-name-in-template-casing": [
+            "error",
+            "PascalCase",
+            {
+                "registeredComponentsOnly": false,
+                "ignores": []
+            }
+        ],
+        "vue/multi-word-component-names": "warn",
+        "vue/require-default-prop": "off"
+    }
+}

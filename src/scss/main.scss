@@ -1,0 +1,98 @@
+@import "@/scss/nullstyle";
+
+* {
+    font-family: $main-font-family;
+    line-height: 130%;
+}
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 425px) {
+        padding: 15px;
+    }
+    &_extended {
+        max-width: 1250px;
+    }
+}
+
+.primary-title {
+    color: $primary-color;
+    font-weight: $title-fw;
+    font-size: $primary-title-fz;
+    @media screen and (max-width: 1024px) {
+        font-size: $primary-title-fz_laptop;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: $primary-title-fz_tablet;
+    }
+    @media screen and (max-width: 425px) {
+        font-size: $primary-title-fz_phone;
+    }
+}
+
+body,
+html,
+#app {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.relative {
+    position: relative;
+}
+.main {
+    height: 100%;
+}
+
+.link {
+    font-size: $text-fz;
+    color: $primary-color;
+    position: relative;
+    &:hover {
+        color: white;
+        &::after {
+            content: "";
+            width: 100%;
+            transform: scaleX(1);
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: white;
+        transform: scaleX(0);
+        transform-origin: left;
+        @include transition(ease-in-out, 0.3s);
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    &_left-rotate {
+        transform-origin: 10% 50%;
+        transform: rotate(-90deg) translateX(-50%);
+        width: max-content;
+        height: max-content;
+    }
+    &_right-rotate {
+        transform-origin: 90% 50%;
+        transform: rotate(90deg) translateX(50%);
+        width: max-content;
+        height: max-content;
+    }
+}
+
+#app {
+    padding: 20px;
+    background: $primary-color_light;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    @include flex(flex-start, stretch, $flex-direction: column);
+}
