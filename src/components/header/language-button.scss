@@ -1,8 +1,45 @@
 .lang-button {
-    border: 1px solid white;
+    border: 1px solid $white;
     border-radius: 999px;
     cursor: pointer;
     height: 35px;
     width: 35px;
+    font-size: $small-fz;
+    color: $white;
     @include flex;
+    &_hidden {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        pointer-events: none;
+        @include transition;
+    }
+    &_delay {
+        transition-delay: 0.1s;
+    }
+}
+
+.lang-button-wrapper {
+    @include flex;
+    position: relative;
+    &__langs {
+        position: absolute;
+        left: 100%;
+        padding-left: 10px;
+        @include flex;
+        .lang-button {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &:hover {
+        .lang-button_hidden {
+            position: static;
+            pointer-events: all;
+            z-index: auto;
+            opacity: 1;
+        }
+    }
 }

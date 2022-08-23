@@ -11,13 +11,13 @@ useParallax(title);
         <YellowCircle />
         <HoverSpinner />
         <div class="screen-content__headers">
-            <RouterLink to="/" class="link link_left-rotate"
+            <RouterLink to="/another" class="link link_left-rotate"
                 >where?</RouterLink
             >
             <h1 ref="title" class="primary-title">
                 FULL-CYCLE EVENT AGENCY
             </h1>
-            <RouterLink to="/" class="link link_right-rotate"
+            <RouterLink to="/another" class="link link_right-rotate"
                 >what?</RouterLink
             >
         </div>

@@ -5,7 +5,14 @@
     position: absolute;
     top: 67vh;
     left: 60vw;
-
+    @media screen and (max-width: 1024px) {
+        width: 130px;
+        height: 130px;
+    }
+    @media screen and (max-width: 425px) {
+        top: 60vh;
+        left: 58vw;
+    }
     cursor: pointer;
     @include flex;
     &:hover {
@@ -35,10 +42,14 @@
     .circle-latter {
         left: 50%;
         transform-origin: 0 80px;
+        @media screen and (max-width: 1024px) {
+            transform-origin: 0 65px;
+            font-weight: $standart-fw;
+        }
         position: absolute;
         font-size: 14px;
         letter-spacing: 120%;
-        font-weight: 700;
+        font-weight: $title-fw;
         color: white;
     }
 }

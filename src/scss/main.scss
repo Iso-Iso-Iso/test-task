@@ -96,3 +96,48 @@ html,
     overflow: hidden;
     @include flex(flex-start, stretch, $flex-direction: column);
 }
+.transition-wrapper {
+    flex: 1 1 100%;
+}
+
+.transtion-wrapper {
+    @include transition(1s);
+    &_active {
+        transform: translateX(0);
+    }
+    &_after {
+        transform: translateX(100%);
+    }
+    &_remove-transitio {
+        transition-duration: 0s;
+    }
+}
+
+.page-enter-active,
+.page-leave-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $secondary-color;
+    transform: translateX(0);
+
+    z-index: 999;
+}
+.page-enter-active {
+    @include transition(0.3s);
+}
+.page-leave-active {
+    @include transition(0.1s);
+}
+.page-enter-from {
+    transform: translateX(-100%);
+}
+.page-leave-to {
+    transform: translateX(100%);
+}
+
+.flex-full {
+    flex: 1 1 100%;
+}
