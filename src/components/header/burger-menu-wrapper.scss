@@ -16,10 +16,10 @@
 }
 
 .burger-wrapper-enter-from,
-.burger-button-leave-to {
+.burger-wrapper-leave-to {
     transform: translateX(-100%);
 }
-.burger-button-enter-to,
-.burger-button-leave-from {
+.burger-wrapper-enter-to,
+.burger-wrapper-leave-from {
     transform: translateX(0);
 }

@@ -2,7 +2,7 @@
     <div class="header-logo-wrapper">
         <div class="header-logo">
             <svg
-                class="header-logo__svg"
+                class="header-logo__icon"
                 viewBox="0 0 84 46"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -16,7 +16,7 @@
         </div>
         <div class="header-logo header-logo_load-animation">
             <svg
-                class="header-logo__svg header-logo__svg_load-animation"
+                class="header-logo__icon header-logo__icon_load-animation"
                 viewBox="0 0 84 46"
                 xmlns="http://www.w3.org/2000/svg"
             >
