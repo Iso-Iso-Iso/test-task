@@ -1,3 +1,3 @@
 <template>
-    <div>page</div>
+    <div><RouterLink class="link" to="/">Back</RouterLink></div>
 </template>
