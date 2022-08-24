@@ -31,6 +31,9 @@
     @media screen and (max-width: 425px) {
         font-size: $primary-title-fz_phone;
     }
+    @media screen and (max-width: 320px) {
+        font-size: $primary-title-fz_small-phone;
+    }
 }
 
 body,

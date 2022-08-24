@@ -1,0 +1,25 @@
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    bottom: 0;
+    overflow: auto;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.burger-wrapper-enter-active,
+.burger-wrapper-leave-active {
+    @include transition;
+}
+
+.burger-wrapper-enter-from,
+.burger-button-leave-to {
+    transform: translateX(-100%);
+}
+.burger-button-enter-to,
+.burger-button-leave-from {
+    transform: translateX(0);
+}
